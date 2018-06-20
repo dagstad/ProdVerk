@@ -1,2 +1,2 @@
 # ProdVerk
-Log for production animal feed pelleting line
+Log for production parameters for animal feed, pelleting line
