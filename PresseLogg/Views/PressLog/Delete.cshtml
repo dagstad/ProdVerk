@@ -1,0 +1,160 @@
+﻿@model PresseLogg.Models.PressLog
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Logg</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Article.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Article.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Presse)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Presse)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TonnPrTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TonnPrTime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TempMixer1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TempMixer1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TempMixer2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TempMixer2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Damptrykk)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Damptrykk)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.KgDampPrTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.KgDampPrTime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.KonTrykk)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.KonTrykk)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Oppholdstid)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Oppholdstid)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TempExpander)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TempExpander)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AmpMixer1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AmpMixer1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AmpMixer2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AmpMixer2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AmpExpander)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AmpExpander)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.VinkelOAP)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VinkelOAP)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AmpPresse)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AmpPresse)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TempKjøle)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TempKjøle)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Kommentar)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Kommentar)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

@@ -1,0 +1,39 @@
+﻿@model IEnumerable<PresseLogg.Models.ShiftTaskGroup>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ShiftTaskGroupName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ShiftTaskId)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.ShiftTaskGroupName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ShiftTaskId)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ShiftTaskGroupId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ShiftTaskGroupId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ShiftTaskGroupId })
+        </td>
+    </tr>
+}
+
+</table>

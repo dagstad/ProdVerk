@@ -1,0 +1,168 @@
+﻿@model PresseLogg.Models.PressLog
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <h4>Logg</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            @Html.LabelFor(model => model.ArticleId, "ArticleId", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("ArticleId", null, htmlAttributes: new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.ArticleId, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group" data-toggle="tooltip" data-placement="left" title="Presse linje">
+            @Html.LabelFor(model => model.Presse, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EnumDropDownListFor(model => model.Presse, htmlAttributes: new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.Presse, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group" data-toggle="tooltip" data-placement="left" title="Tonn pr. Time">
+            @Html.LabelFor(model => model.TonnPrTime, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.TonnPrTime, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.TonnPrTime, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.TempMixer1, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.TempMixer1, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.TempMixer1, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.TempMixer2, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.TempMixer2, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.TempMixer2, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group" data-toggle="tooltip" data-placement="left" title="Damp Trykk">
+            @Html.LabelFor(model => model.Damptrykk, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Damptrykk, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Damptrykk, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group" data-toggle="tooltip" data-placement="left" title="Kg. Damp pr.time">
+            @Html.LabelFor(model => model.KgDampPrTime, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.KgDampPrTime, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.KgDampPrTime, "", new { @class = "text-danger" })
+            </div>
+        </div>
+           
+        <div class="form-group">
+            @Html.LabelFor(model => model.KonTrykk, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.KonTrykk, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.KonTrykk, "", new { @class = "text-danger" })
+            </div>
+        </div>
+            
+        <div class="form-group" data-toggle="tooltip" data-placement="left" title="Oppholdstid">
+            @Html.LabelFor(model => model.Oppholdstid, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Oppholdstid, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Oppholdstid, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.TempExpander, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.TempExpander, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.TempExpander, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.AmpMixer1, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.AmpMixer1, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.AmpMixer1, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.AmpMixer2, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.AmpMixer2, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.AmpMixer2, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.AmpExpander, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.AmpExpander, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.AmpExpander, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group" data-toggle="tooltip" data-placement="left" title="Vinkel OAP">
+            @Html.LabelFor(model => model.VinkelOAP, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.VinkelOAP, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.VinkelOAP, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group" data-toggle="tooltip" data-placement="left" title="AMP Presse">
+            @Html.LabelFor(model => model.AmpPresse, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.AmpPresse, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.AmpPresse, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group" data-toggle="tooltip" data-placement="left" title="Temp Kjøle">
+            @Html.LabelFor(model => model.TempKjøle, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.TempKjøle, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.TempKjøle, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group" data-toggle="tooltip" data-placement="left" title="Kommentar">
+            @Html.LabelFor(model => model.Kommentar, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Kommentar, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Kommentar, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
